@@ -107,7 +107,12 @@ Fakat bu şekilde image eklememiş tarayıcı tarafında birden fazla istek atı
 3. **Inline Olarak**
 4. **Embed veya iframe**
 
-\[image:2E8C84C0-C649-4357-A3D6-0327654198EB-13548-00006999C481FC3B/Screen Shot 2019-10-15 at 14.30.15.png\]
+|  | **Object** | Inline | Img | Background-image |
+| :--- | :--- | :--- | :--- | :--- |
+| **CSS Manipulation** | Yes | Yes | Some Inline | Some Inline |
+| **JS Manipulation** | Yes | Yes | No | No |
+| **SVG Animation** | Yes | Yes | Yes | Yes |
+| I**nteractive SVG Animation** | Yes | Yes | No | No |
 
 ### SVG’ye Css ile Müdahale Etme
 
