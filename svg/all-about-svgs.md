@@ -147,6 +147,14 @@ Bunun için 2 türlü yöntemimiz var;
 
 SVG çoğu tarayıcı tarafından destekleniyor. Bu sebeple SVG’leri kullanırken uygulamamızın SVG tarafından bozulacağı riski bir hayli az görünüyor. Bunun için tarayıcı desteklerini inceleyebileceğiniz [caniuse.com](https://caniuse.com/#search=svg) sitesine bakabilirsiniz.
 
+### İletişim Halinde Olalım 😊
+
+Benimle sosyal medya hesaplarım aracılığıyla iletişime geçebilirsiniz.
+
+* [Linkedin Hesabım](https://www.linkedin.com/in/afozbek/)
+* [Github Hesabım](https://github.com/afozbek)
+* [Twitter Hesabım](https://twitter.com/afozbek_)
+
 ### Yararlanılan Kaynaklar
 
 * [A Practical Guide to SVGs on the web](https://svgontheweb.com)
