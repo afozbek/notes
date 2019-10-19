@@ -2,7 +2,7 @@
 description: Bu sayfada almış olduğum notlarımı paylaşıyor olacağım
 ---
 
-# Personal Notes
+# Kişisel Notlarım
 
 ## Merhaba 🙌🏻
 

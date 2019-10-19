@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Personal Notes](README.md)
+* [Kişisel Notlarım](README.md)
 
 ## svg
 
