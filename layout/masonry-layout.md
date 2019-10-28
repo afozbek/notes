@@ -41,7 +41,7 @@ Kullanabileceğimiz alanlara gelince;
 * Görüntülenecek öğelerin farklı boyutlarda olması gerekir ki bu tasarım bunu hedefliyor.
 * Tasarım efektlerinin gerçekten anlaşabilmesi için belirli sayıda örneğin sergilenmiş olması gerekiyor.
 
-### Generating Masonry Layouts
+### Masonry Layout Oluşturma 
 
 Masonry Layout ları ekleyebileceğimiz bir sürü farklı yol olsa da bunları CSS ve Javascript olarak iki farklı parçada nasıl uygulayabileceğimizi gösterecek olursam;
 
@@ -119,6 +119,12 @@ Masonry Layout'u kullanabileceğimiz javascript pluginlerini de paylaşacak olur
 * [Isotope](http://isotope.metafizzy.co/) 
 * [Nested](http://suprb.com/apps/nested/) 
 * [Freetile.js](http://yconst.com/web/freetile/) 
+
+### Son Sözler
+
+Kodların yapıldığı codepen linkine buradan ulaşabilirsiniz
+
+{% embed url="https://codepen.io/afozbek/pen/VwwzPpN" caption="Masonry Codepen Linki" %}
 
 ### Yararlanılan Kaynaklar 📚
 
