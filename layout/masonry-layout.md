@@ -61,19 +61,19 @@ Fakat ben uygulaması en kolay olan ve araştırmalarım arasında en kolay olan
 
 ```css
 .container {
- column-count: 3;
- max-width: 1000px;
+  column-count: 3;
+  max-width: 1000px;
 }
 
 .box{
- width: 300px;
- margin-bottom: 10px;
- 
- padding: 10px;
- border-radius: 3px;
- 
- background: red;
- color: white;
+  width: 300px;
+  margin-bottom: 10px;
+  
+  padding: 10px;
+  border-radius: 3px;
+  
+  background: red;
+  color: white;
 }  
 ```
 
@@ -83,16 +83,16 @@ Fakat görebileceğiniz üzere **6. kutuda** column tam olarak istediğimiz form
 
 ```css
 .box{
- width: 300px;
- margin-bottom: 10px;
- 
- padding: 10px;
- border-radius: 3px;
- 
- background: red;
- color: white;
- 
- break-inside: avoid;
+  width: 300px;
+  margin-bottom: 10px;
+  
+  padding: 10px;
+  border-radius: 3px;
+  
+  background: red;
+  color: white;
+  
+  break-inside: avoid;
 }  
 ```
 
@@ -103,10 +103,10 @@ Gördüğünüz üzere break inside ile çok kolay bir şekilde oluşan kayma s�
 Eğer column lar arasına boşluk bırakmak istiyorsak bunu da yine grid property si olan **column-gap** ile yapabiliriz.
 
 ```css
-.container{
-    //...
-    
-    column-gap: 10px;
+.container {
+  //...
+  
+  column-gap: 10px;    
 }
 ```
 
