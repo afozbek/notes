@@ -100,6 +100,16 @@ Fakat görebileceğiniz üzere **6. kutuda** column tam olarak istediğimiz form
 
 Gördüğünüz üzere break inside ile çok kolay bir şekilde oluşan kayma sıkıntısını çözmüş olduk.
 
+Eğer column lar arasına boşluk bırakmak istiyorsak bunu da yine grid property si olan **column-gap** ile yapabiliriz.
+
+```css
+.container{
+    //...
+    
+    column-gap: 10px;
+}
+```
+
 #### 2 - Javascript
 
 Masonry Layout'u kullanabileceğimiz javascript pluginlerini de paylaşacak olursak;
