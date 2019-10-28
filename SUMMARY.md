@@ -10,3 +10,7 @@
 
 * [Supervised Learning nedir Unsupervised learning nedir?](machine-learning/supervised-learning-nedir-unsupervised-learning-nedir.md)
 
+## Layout
+
+* [Masonry Layout](layout/masonry-layout.md)
+
