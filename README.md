@@ -25,4 +25,5 @@ Web teknolojilerine ilgi duyuyorum ve bu alanda projeler geliştiriyorum. Özell
 * Arkadaşlarımla dolaşmak ve sohbet etmek
 * Film izlemek
 * Müzik dinlemek
+* Yüzmek
 
