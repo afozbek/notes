@@ -149,6 +149,18 @@ Focus-ring is the outline which gets displayed around the control when it receiv
 
 {% embed url="https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2" %}
 
+### Screenshots
+
+![What-If](../.gitbook/assets/code-accessibility-warning%20%281%29.jpg)
+
+![Checking Accessibility With AXE](../.gitbook/assets/screen-shot-2019-12-09-at-09.18.02.png)
+
+![Checking Accessibility With Chrome Lighthouse](../.gitbook/assets/screen-shot-2019-12-09-at-09.20.42.png)
+
+![](../.gitbook/assets/screen-shot-2019-12-09-at-09.21.51%20%281%29.png)
+
+![](../.gitbook/assets/screen-shot-2019-12-09-at-09.22.23.png)
+
 ### Yararlanılan Kaynaklar
 
 {% embed url="https://www.w3.org/WAI/fundamentals/accessibility-intro/" %}
