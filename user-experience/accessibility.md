@@ -43,7 +43,7 @@ The power of the Web is in its universality. Access by everyone regardless of di
 
 ### Keyboard accessible
 
-All the interactive elements of your page e.g. text boxes, buttons etc should be accessible by keyboard. That means you should be able to bring focus on them by using Tab and Shift+Tab keys.
+**All the interactive elements of your page** e.g. text boxes, buttons etc should be accessible by keyboard. That means you should be able to bring focus on them by using **Tab and Shift+Tab** keys.
 
 Most of the interactive elements are keyboard accessible by default, i.e. browser takes care of making them keyboard ‘focus-able’.
 
@@ -51,10 +51,8 @@ Non interactive elements like div, span and images are not keyboard accessibly b
 
 ### Tab-order
 
-Eğer kullanıcı bir veri girmiyorsa ve bir yere yönlenmiyorsa **focusable** olması gereksizdir
-
 * The order in which elements get focus is called tab-order. Developers need to take care that the interactive elements have logical tab-order. Tab order should follow the natural reading sequence i.e. top to bottom and right to left \(for an RTL type language\). If your tab focus is jumping around the page unpredictably then its not going to be great experience for the users.
-* Tab-order mainly depends on the dom-order, i.e. the way you have written your html. Any element which is ahead in the dom tree automatically goes ahead in the tab-order.
+* Tab-order mainly depends on the **dom-order,** i.e. the way you have written your html. Any element which is ahead in the dom tree automatically goes ahead in the tab-order.
 * Sometimes people use css to make the element appear in an order which is different form dom-order. Example
 
 ```markup
@@ -73,7 +71,7 @@ This is how you can **solve** it:
 <a href="#" style="float:right;">Right aligned link</a>
 ```
 
-**INERT** initially belirli kısımları unfocusable yapmak için kullanılan bir js kütüphanesi:
+**INERT** is a javascript library which makes part of the application focusable or unfocusable. Under the hood it adds tabindex=0 or -1 to the element.
 
 {% embed url="https://github.com/WICG/inert/blob/master/src/inert.js" caption="inert.js" %}
 
@@ -81,9 +79,9 @@ This is how you can **solve** it:
 
 Recommended Usage **0 for tab accessible** and **-1 for tab unaccessible**
 
-* To make a non interactive element focusable you can give it tabindex= 0 attribute. Example: Dummy text&lt;/div&gt;. This not only makes the element tab accessible but also makes it programmatically focusable. That means you can call .focus\(\) on that element.
-* tabindex= -1 will take out any interactive element from tab-order. That means you can not access it through keyboard. This is particularly useful when you want to make few links/buttons inaccessible when they are behind an overlay or transitioned out of display \(e.g. hamburger menus\)
-* Positive tabindex value makes the element tab accessible and also puts the element ahead in tab-order based on the value of the attribute. But positive tabindex values are considered anti-pattern becuase it may get very confusing more than one elements have positive tabindex values. So, don’t use positive tabindex.
+* To make a non interactive element focusable you can give it `tabindex= 0` attribute. This not only makes the element **tab accessible** but also makes it programmatically **focusable**. That means you can call **.focus\(\)** on that element.
+* `tabindex= -1` will take out any interactive element from tab-order. That means you can not access it through keyboard. This is particularly useful when you want to make few links/buttons inaccessible when they are behind an overlay or transitioned out of display \(e.g. hamburger menus\)
+* Positive tabindex value makes the element tab accessible and also puts the element ahead in tab-order based on the value of the attribute. But positive tabindex values are considered anti-pattern becuase it may get very confusing more than one elements have positive tabindex values. So, **don’t** **use** positive tabindex.
 
 ### Use native elements
 
@@ -97,10 +95,6 @@ Recommended Usage **0 for tab accessible** and **-1 for tab unaccessible**
 * If you must create a custom element then make sure that you go through the wai-aria best practices guide: [WAI-ARIA Authoring Practices 1.1](https://www.w3.org/TR/wai-aria-practices-1.1/)
 * These guidelines tell you how the keyboard interactions should be for any element. It also has links to demo and code examples for our help.
 
-{% embed url="https://codepen.io/afozbek/pen/yLyLWVG" %}
-
-Kodda da görüldüğü gibi tabindex değerimiz 0 yapılarak div elementini focusable yapıyoruz.
-
 {% embed url="https://www.youtube.com/watch?v=CZGqnp06DnI&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=5" %}
 
 {% embed url="https://www.w3.org/TR/wai-aria-practices-1.1/examples/button/button.html" %}
@@ -109,9 +103,9 @@ Kodda da görüldüğü gibi tabindex değerimiz 0 yapılarak div elementini foc
 
 * Many users with visual impairment rely on assistive tools like screen readers to get information on the page and to interact with page
 * Always use **alt attribute** for images. Screen readers would read out the alt text for its users who have difficulty in seeing the image.
-* Use proper heading tags , ,  etc for headings, because screen readers allow users to navigate within the content of page using headings.
-* Make efficient use of semantic tags like , , ,  etc because screen readers allow users to navigate within the content of page using these tags.
-* Screen readers need to identify the interactive elements correctly so it can ask users to interact with them. For example, if you have created a button using  tag then screen reader will call it out as button. But if your button is something like this Submit then screen reader will call it a “group” because div is grouping element, and user would not understand that they are supposed to interact with that element.
+* Use proper heading tags, etc for headings, because screen readers allow users to navigate within the content of page using headings.
+* Make efficient use of semantic tags like `<header>, <footer>, <section>, <nav>`  etc because screen readers allow users to navigate within the content of page using these tags.
+* Screen readers need to identify the interactive elements correctly so it can ask users to interact with them. For example, if you have created a button using `<button>` tag then screen reader will call it out as button. But if your button is something like `<div class="fancy button">Submit</div>` then screen reader will call it a “**group**” because div is grouping element, and user would not understand that they are supposed to interact with that element.
 
 **How HTML elements are supported by screen readers**
 
