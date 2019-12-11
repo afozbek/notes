@@ -47,6 +47,8 @@ For example:
 * people with “situational limitations” such as in bright sunlight or in an environment where they cannot listen to audio
 * people using a slow Internet connection, or who have limited or expensive bandwidth
 
+{% embed url="https://www.youtube.com/watch?v=LdVlbO7\_hz8" caption="Understanding the diversity of users" %}
+
 ## Key Features When Developing Accessible Websites
 
 ### Semantics
