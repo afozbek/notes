@@ -11,12 +11,8 @@ description: >-
 
 Accessibility is strongly related to universal design which is the process of creating products that are usable by people with the widest possible range of abilities, operating within the widest possible range of situations. This is about making things accessible to all people \(whether they have a disability or not\).
 
-> Making an accessible site means making it for ‘almost’ everyone.
-
 {% hint style="info" %}
-The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.
-
-                          -- _Tim Berners-Lee, W3C Director and inventor of the World Wide Web_ 
+Making an accessible site means making it for ‘almost’ everyone.
 {% endhint %}
 
 Web accessibility means that websites, tools, and technologies are designed and developed so that people with disabilities can use them. \(Web erişilebilirliği, web sitelerinin, araçların ve teknolojilerin engelli kişilerin bunları kullanabileceği şekilde tasarlandığı ve geliştirildiği anlamına gelir.\)
