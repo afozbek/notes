@@ -10,9 +10,7 @@ Kişisel notlarımı ve aldığım özetlerimi paylaştığım sayfama hoşgeldi
 
 {% embed url="https://www.pyimagesearch.com/2014/10/20/finding-shapes-images-using-python-opencv/" %}
 
-
-
-### Kimim Ben 👨🏻‍💻
+## Kimim Ben 👨🏻‍💻
 
 Problemlerimi kod ile çözmekten hoşlanan bir yazılım geliştiricisiyim. Boyner şirketinde Front End Developer olarak çalışıyorum ve yaptığım işten zevk alıyorum.
 
