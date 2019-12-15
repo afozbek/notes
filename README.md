@@ -8,13 +8,11 @@ description: Bu sayfada almış olduğum notlarımı paylaşıyor olacağım
 
 Kişisel notlarımı ve aldığım özetlerimi paylaştığım sayfama hoşgeldiniz. Sağ üstte bulunan arama butonundan istediğiniz makaleyi arayabilirsiniz. Şu an geliştirme aşamasında olduğumdan arama butonunu kullanmadan da hızlıca sayfada gezinebilirsiniz.
 
-{% embed url="https://www.pyimagesearch.com/2014/10/20/finding-shapes-images-using-python-opencv/" %}
-
 ## Kimim Ben 👨🏻‍💻
 
 Problemlerimi kod ile çözmekten hoşlanan bir yazılım geliştiricisiyim. Boyner şirketinde Front End Developer olarak çalışıyorum ve yaptığım işten zevk alıyorum.
 
-Web teknolojilerine ilgi duyuyorum ve bu alanda projeler geliştiriyorum. Özellikle Reactjs, Reduxjs, Nodejs ve Vue.js alanında bilgi sahibiyim. Bildiklerimi geliştirmeye ve yeni teknolojiler öğrenmeye her gün gayret etiyorum. 
+Web teknolojilerine ilgi duyuyorum ve bu alanda projeler geliştiriyorum. Özellikle **Reactjs, Reduxjs, Nodejs ve Vue.js** alanında bilgi sahibiyim. Bildiklerimi geliştirmeye ve yeni teknolojiler öğrenmeye her gün gayret gösteriyorum. 
 
 #### Yapmaktan hoşlandığım aktiviteler
 
