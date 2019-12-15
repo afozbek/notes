@@ -16,5 +16,5 @@
 
 ## User Experience
 
-* [Web Accessibility Notlar](user-experience/accessibility.md)
+* [Web Accessibility](user-experience/accessibility.md)
 

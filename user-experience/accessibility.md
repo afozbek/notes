@@ -5,7 +5,7 @@ description: >-
   impairment.
 ---
 
-# Web Accessibility Notlar
+# Web Accessibility
 
 ![accessibility](../.gitbook/assets/image.png)
 
