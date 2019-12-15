@@ -7,6 +7,8 @@ description: >-
 
 # Web Accessibility Notlar
 
+![accessibility](../.gitbook/assets/image.png)
+
 ## What is Web Accessibility
 
 Accessibility is strongly related to universal design which is the process of creating products that are usable by people with the widest possible range of abilities, operating within the widest possible range of situations. This is about making things accessible to all people \(whether they have a disability or not\).
@@ -139,12 +141,12 @@ There are indeed situations where standard HTML **does not** provide functionali
 
 * Any code written in html not only has a visual representation but also has a semantical representation called _accessibility tree_. Accessibility tree is used by assistive tools like **screen readers** to inform the user about the accessibility properties like **type, name, state and value** of the element. The values of these accessibility properties are computed by browser based on the information provided in **html code**.
 
-![](../.gitbook/assets/1ncw2mdwhofoxlhkzagsnla%20%281%29.png)
+![example-code](../.gitbook/assets/1ncw2mdwhofoxlhkzagsnla%20%281%29.png)
 
 * In above example name is computed by the  tag. **Make use of label tag wherever applicable.**
 * Use **aria-label** attribute to ensure that element has a name. Suppose you have a save button which does not have a text content, then browser will not be able to compute its name. We can mention aria-label attribute to help browser compute its name.
 
-![](../.gitbook/assets/15gmyvcwop-voychqnp6vmq.png)
+![example-code-2](../.gitbook/assets/15gmyvcwop-voychqnp6vmq.png)
 
 * Similarly use different aria attributes like role, **aria-labelledby, aria-expanded, aria-checked \(etc..\)** to help browser compute accessibility properties:
 
@@ -167,15 +169,15 @@ Focus-ring is the outline which gets displayed around the control when it receiv
 
 ### Screenshots
 
-![What-If](../.gitbook/assets/code-accessibility-warning%20%281%29.jpg)
+![vscode accessibility extention](../.gitbook/assets/code-accessibility-warning%20%281%29.jpg)
 
 ![Checking Accessibility With AXE](../.gitbook/assets/screen-shot-2019-12-09-at-09.18.02.png)
 
-![Checking Accessibility With Chrome Lighthouse](../.gitbook/assets/screen-shot-2019-12-09-at-09.20.42.png)
+![Checking Accessibility With Chrome Lighthouse-1](../.gitbook/assets/screen-shot-2019-12-09-at-09.20.42.png)
 
-![](../.gitbook/assets/screen-shot-2019-12-09-at-09.21.51%20%281%29.png)
+![Checking Accessibility With Chrome Lighthouse-2](../.gitbook/assets/screen-shot-2019-12-09-at-09.21.51%20%281%29.png)
 
-![](../.gitbook/assets/screen-shot-2019-12-09-at-09.22.23.png)
+![Checking Accessibility With Chrome Lighthouse-3](../.gitbook/assets/screen-shot-2019-12-09-at-09.22.23.png)
 
 ### Yararlanılan Kaynaklar
 
