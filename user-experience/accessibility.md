@@ -9,8 +9,6 @@ description: >-
 
 ![accessibility](../.gitbook/assets/image.png)
 
-
-
 ## What is Web Accessibility
 
 Accessibility is strongly related to universal design which is the process of creating products that are usable by people with the widest possible range of abilities, operating within the widest possible range of situations. This is about making things accessible to all people \(whether they have a disability or not\).
