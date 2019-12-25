@@ -1,12 +1,12 @@
 ---
-description: Bu sayfada almış olduğum notlarımı paylaşıyor olacağım
+description: "Bu sitede, almış olduğum notları sizlerle paylaşıyor olacağım. Kısaca kim olduğumu merak ediyorsanız aşağıdaki paragrafları okumalısınız derim \U0001F607"
 ---
 
 # Kişisel Notlarım
 
 ## Merhaba 🙌🏻
 
-Kişisel notlarımı ve aldığım özetlerimi paylaştığım sayfama hoşgeldiniz. Sağ üstte bulunan arama butonundan istediğiniz makaleyi arayabilirsiniz. Şu an geliştirme aşamasında olduğumdan arama butonunu kullanmadan da hızlıca sayfada gezinebilirsiniz.
+Kişisel notlarımı aldığım ve özetler paylaştığım sayfama hoşgeldiniz. Sağ üstte bulunan arama butonundan istediğiniz makaleyi arayabilirsiniz. Şu an geliştirme aşamasında olduğumdan arama butonunu kullanmadan da hızlıca sayfalarda gezinebilirsiniz.
 
 ## Kimim Ben 👨🏻‍💻
 
@@ -26,4 +26,12 @@ Web teknolojilerine ilgi duyuyorum ve bu alanda projeler geliştiriyorum. Özell
 * Film izlemek
 * Müzik dinlemek
 * Yüzmek
+
+### İletişim Halinde Olalım 😊
+
+Benimle sosyal medya hesaplarım aracılığıyla iletişime geçebilirsiniz.
+
+* [Linkedin Hesabım](https://www.linkedin.com/in/afozbek/)
+* [Github Hesabım](https://github.com/afozbek)
+* [Twitter Hesabım](https://twitter.com/afozbek_)
 
