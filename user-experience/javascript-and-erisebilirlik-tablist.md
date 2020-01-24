@@ -39,7 +39,7 @@ Html yapısı genel olarak button ve ilgili div elementlerinde oluşmaktadır.
 
 Aria özellikleri olarak ihtiyacımız olan elementler genel olarak ilgili butonun seçilip seçilmediğini bilgilendirmek için kullanacağımız **aria-controls** özelliği, kontrol ettiği paneli söylemek için kullanacağımız **aria-controls** özelliği ve ayrıca genel olarak çoğu yapıda ortak kullanılan **tabindex** ve **role** özellikleri olacaktır. Bu özellikler screen reader kullanan kullanıcılara detaylı bilgilendirme yapmak için olacaktır. Daha detaylı bilgilendirme için makalenin başında belirttiğim linke tıklayarak bilgi alabilirsiniz.
 
-```text
+```markup
 <div class="m-buttonList" role="tablist">
 	<button class="m-buttonList__tabBtn" 
         role="tab" 
@@ -69,7 +69,7 @@ Css kısmında çok fazla vakit kaybetmek istemediğimden genel olarak yapıyı 
 
 Belirtmek istediğim bir noktayı açıklayacak olursam;
 
-```text
+```css
 .m-contentList {
  &__tab {
   display: none; 
@@ -94,40 +94,40 @@ Evet artık bu kısımı 2 parçaya bölmek istedim.
 
 #### Event Tanımlama
 
-Burada bizim aslında kullanmamız gereken elementler: Butonlarımız ve tablarımız. Bu sebeple bunları öncesinde seçmemiz gerekir. Tuş olarak da ok tuşlarını ve tab silmek için delete tuşunu kullanacağımız için bunların key code larını tanımlamamız gerekir. Sonrasında her bir buton için hem **click** hem de **keydown** eventi tanımlamamız gerekicektir. O zaman kodlamaya başlayalım
+Burada bizim aslında kullanmamız gereken elementler: Butonlarımız ve tablarımız. Bu sebeple bunları öncesinde seçmemiz gerekir. Tuş olarak da ok tuşlarını ve tab silmek için delete tuşunu kullanacağımız için bunların key code larını tanımlamamız gerekir. Sonrasında her bir buton için hem **click** hem de **keydown** eventi tanımlamamız gerekicektir. O zaman kodlamaya başlayalım;
 
-```text
+```javascript
 const keyCodes = {
-    up: 38,
-    down: 40,
-    left: 37,
-    right: 39,
-    del: 46
-  };
+  up: 38,
+  down: 40,
+  left: 37,
+  right: 39,
+  del: 46
+ };
 
 const tabBtns = document.querySelectorAll(".m-buttonList__tabBtn");
 // Change Html Document to Array
 const contentTabs = Array.from(document.querySelectorAll(".m-contentList__tab"));
 
 tabBtns.forEach(btn => {
-    btn.addEventListener("keydown", function (e) {
-	     // Change focus between tabs
-      }
-    });
-
-    btn.addEventListener("click", function (e) {
-	     // Switch between tabs
-    });
-  });
+ btn.addEventListener("keydown", function (e) {
+ 	     // Change focus between tabs
+   }
+ });
+ 
+ btn.addEventListener("click", function (e) {
+ 	     // Switch between tabs
+ });
+});
 ```
 
 Burada görüceğiniz gibi her bir buton için keydown ve click event handler ları oluşturduk ve olacak olayları belirttik. Bu kısımda her şey çok açık olduğundan diğer adıma geçiyorum.
 
 #### Event Uygulama
 
-Bu kısım bir önceki bölüme göre birazcık daha dikkat gerektirdiğinden elimden geldiğince her şeyi açıklamaya çalışacağım. Öncelikle click eventinde yapmamız gereken seçilen tabın class ını değiştirmek olacaktır. Bunun için öncelikle bütün tabları dolaşıp **-open** class ını kaldırıp daha sonrasında ise butonun control ettiği tabı bulup o taba -**open** classını ekleyeceğiz.
+Bu kısım bir önceki bölüme göre birazcık daha dikkat gerektirdiğinden elimden geldiğince her şeyi açıklamaya çalışacağım. Öncelikle click eventinde yapmamız gereken seçilen tabın class ını değiştirmek olacaktır. Bunun için öncelikle bütün tabları dolaşıp **-open** class ını kaldırıp daha sonrasında ise butonun control ettiği tabı bulup o taba -**open** classını ekleyeceğiz;
 
-```text
+```javascript
 tabBtns.forEach(btn => {
 	btn.addEventListener("click", function (e) {
 	  contentTabs.forEach(tab=> tab.classList.remove("-open"));
@@ -143,13 +143,13 @@ tabBtns.forEach(btn => {
 
 {% embed url="https://codepen.io/afozbek/pen/qBEvOqo" caption="a11y-tablist-4 - event uygulama 1" %}
 
-Click eventimizde yapacaklarımız bu kadardı. Şimdi **keydown** eventini kodlamaya çalışalım. Öncelikle burda anlatmadan önce kodu incelemenizi istiyorum.
+Click eventimizde yapacaklarımız bu kadardı. Şimdi **keydown** eventini kodlamaya çalışalım. Öncelikle burda anlatmadan önce kodu incelemenizi istiyorum;
 
-```text
+```javascript
 tabBtns.forEach(btn => {
 	
-	// click event
-
+	// ... click event
+	
 	btn.addEventListener("keydown", function (e) {
 	  if (e.keyCode === keyCodes.up || e.keyCode === keyCodes.left) {
 	    selectPreviousEl(this, tabBtns[tabBtns.length - 1]);
@@ -171,40 +171,40 @@ tabBtns.forEach(btn => {
 });
 
 function selectPreviousEl (target, defaultEl) {
-    const prevEl = target.previousElementSibling;
-    let selectedEl;
-    if (prevEl) {
-      selectedEl = prevEl;
-    } else {
-      selectedEl = defaultEl;
-    }
-
-    focusSelectedElement(selectedEl);
+  const prevEl = target.previousElementSibling;
+  let selectedEl;
+  if (prevEl) {
+    selectedEl = prevEl;
+  } else {
+    selectedEl = defaultEl;
   }
 
-  function selectNextEl (target, defaultEl) {
-    const nextEl = target.nextElementSibling;
-    let selectedEl;
-    if (nextEl) {
-      selectedEl = nextEl;
-    } else {
-      selectedEl = defaultEl;
-    }
+  focusSelectedElement(selectedEl);
+}
 
-    focusSelectedElement(selectedEl);
+function selectNextEl (target, defaultEl) {
+  const nextEl = target.nextElementSibling;
+  let selectedEl;
+  if (nextEl) {
+    selectedEl = nextEl;
+  } else {
+    selectedEl = defaultEl;
   }
 
-  function focusSelectedElement (selectedEl) {
-    tabBtns.forEach(btn=> {
-      btn.setAttribute("tabindex", "-1");
-      btn.setAttribute("aria-selected", false);
-    });
+  focusSelectedElement(selectedEl);
+}
 
-    selectedEl.setAttribute("tabindex", "0");
-    selectedEl.setAttribute("aria-selected", true);
-    selectedEl.focus();
-    selectedEl.click(); // tab lar arasında hemen geçmek istemez iseniz burayı yorum satırına alın
-  }
+function focusSelectedElement (selectedEl) {
+  tabBtns.forEach(btn=> {
+    btn.setAttribute("tabindex", "-1");
+    btn.setAttribute("aria-selected", false);
+  });
+
+  selectedEl.setAttribute("tabindex", "0");
+  selectedEl.setAttribute("aria-selected", true);
+  selectedEl.focus();
+  selectedEl.click(); // tab lar arasında hemen geçmek istemez iseniz burayı yorum satırına alın
+}
 ```
 
 {% embed url="https://codepen.io/afozbek/pen/qBEvORo" caption="a11y-tablist-5 - event uygulama 2" %}
