@@ -13,9 +13,7 @@ Genel olarak odaklanacağım konu başlıklarını açıklayacak olursam;
 * Tablist ve Tab paneller için klavye desteğinin sağlanması,
 * Screen Reader desteğinin oluşturulması
 
-olucaktır.
-
-Başlangıç olarak bu makaleyi okumadan önce sizleri tablist in erişebilirlik üzerine uygulanması alanında çok fazla bilgi bulabileceğiniz kaynağın linkini paylaşmak istedim. Linke aşağıdan ulaşabilirsiniz 👇🏻
+Başlangıç olarak bu makaleyi okumadan önce sizlere tablist in erişebilirlik üzerine uygulanması alanında çok fazla bilgi bulabileceğiniz kaynağın linkini paylaşmak istedim. Linke aşağıdan ulaşabilirsiniz 👇🏻
 
 {% embed url="https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html" caption="Tablistler için Erişebilirlik Adımları" %}
 
