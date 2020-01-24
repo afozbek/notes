@@ -8,6 +8,8 @@ description: >-
 
 Bu makalemizde tablistler üzerinde erişebilirliği javascript ile nasıl kontrol edebileceğimizi anlatmaya çalışacağım 👨🏻‍💼.
 
+_Ekleyeceğimiz özelliklerin son halini görmek için_ [_buraya_](https://a11y-tablist.netlify.com/) _tıklayabilirsiniz._
+
 Genel olarak odaklanacağım konu başlıklarını açıklayacak olursam;
 
 * Tablist ve Tab paneller için klavye desteğinin sağlanması,
