@@ -215,6 +215,10 @@ Benim bu yazıda anlatıcaklarım bu kadar screen reader açısından da test ed
 
 {% embed url="https://codepen.io/afozbek/pen/abzMzje" caption="a11y-tablist-finished - Son Hali" %}
 
+### Son Sözler
+
+Son olarak gördüğünüz gibi aria özelliklerini takip etmek ve kullanmak oldukça kolay. Sadece engelli kullanıcılar için değil, engelli olmayan kullanıcılar için de bir hayli önem arz ediyor. Siz de benim gibi kullanıcı deneyimine bir hayli önem gösteriyorsanız projelerinizde bu konulara dikkat etmeniz hem sizi bir hayli geliştirecek, hem de kullanıcılarınızı sitenizde memnun edecektir. Erişebilir olmak üzere...
+
 ### Yararlanılan Kaynaklar 📚
 
 [Aria-Best-Practices](https://www.w3.org/TR/wai-aria-practices/)
