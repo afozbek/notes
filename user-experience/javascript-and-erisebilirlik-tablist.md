@@ -45,17 +45,19 @@ Aria özellikleri olarak ihtiyacımız olan elementler genel olarak ilgili buton
         role="tab" 
         aria-selected="true"
         aria-controls="tab1"
-        >Tab-1</button>
+        >
+        Tab-1
+   </button>
 	<!-- ... -->
 </div>
 <div class="m-contentList">
 	<div class="m-contentList__tab -tab1 -open" 
-        id="tab1"
-        tabindex="0"
-        role="tabpanel"
-        >
-        Tab-1 panel
-      </div>
+     id="tab1"
+     tabindex="0"
+     role="tabpanel"
+     >
+       Tab-1 panel
+   </div>
 </div>
 ```
 
