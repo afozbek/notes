@@ -10,7 +10,7 @@ Bu makalemizde tablistler üzerinde erişebilirliği javascript ile nasıl kontr
 
 Genel olarak odaklanacağım konu başlıklarını açıklayacak olursam;
 
-* Tablist için klavye desteğinin sağlanması,
+* Tablist ve Tab paneller için klavye desteğinin sağlanması,
 * Screen Reader desteğinin oluşturulması
 
 olucaktır.
@@ -24,7 +24,7 @@ Erişebilirlik özelliklerini eklerken örnekler üzerinden sizlere açıklamala
 Öncelikle sorunlarımızı belirtmeye çalışayım;
 
 1. Kullanıcımız tablar arasında geçiş yaparken klavye kullanabilmeli ve tablar arasında ok tuşları ile geçebilmelidir
-2. Kullanıcımız silinebilen tabları klavyenin delete tuşu ile DOM üzerinden kaldırabilmelidir.
+2. Kullanıcımız silinebilen tabları ve ilgili panelleri klavyenin delete tuşu ile DOM üzerinden kaldırabilmelidir.
 3. Screen Reader kullanan kullanıcılarımıza gerekli ve anlamlı bilgilendirmeleri vermemiz gerekmektedir.
 
 Sorunlarımızı listelediğimize göre ilk olarak genel yapıyı şekillendirmeye çalışalım. Çok fazla css e odaklanmak makaleyi uzatacağından stil kısmına çok fazla takılmadan genel olayları eklemeye çalışacağım.
@@ -42,22 +42,22 @@ Aria özellikleri olarak ihtiyacımız olan elementler genel olarak ilgili buton
 ```markup
 <div class="m-buttonList" role="tablist">
   <button class="m-buttonList__tabBtn" 
-      role="tab" 
-      aria-selected="true"
-      aria-controls="tab1"
-      >
-      Tab-1
-    </button>
-      <!-- ... -->
+    role="tab" 
+    aria-selected="true"
+    aria-controls="panel1"
+    >
+    Tab-1
+  </button>
+  <!-- ... -->
 </div>
 
 <div class="m-contentList">
-  <div class="m-contentList__tab -tab1 -open" 
-    id="tab1"
+  <div class="m-panelList__panel -panel1 -open" 
+    id="panel1"
     tabindex="0"
     role="tabpanel"
     >
-    Tab-1 panel
+    Panel-1 
   </div>
 </div>
 ```
@@ -73,14 +73,14 @@ Css kısmında yalnızca butonlara ve ilgili paneller ile uğraştım. Bu kısı
 Burada yalnızca şu noktayı açıklamak istiyorum;
 
 ```css
-.m-contentList {
- &__tab {
-  display: none; 
-  
-  &.-open {
-   display: block; 
+.m-panelList {
+  &__panel {
+   display: none; 
+   
+    &.-open {
+     display: block; 
+    }
   }
- }
 }
 ```
 
@@ -106,21 +106,24 @@ const keyCodes = {
   left: 37,
   right: 39,
   del: 46
- };
+};
 
-const tabBtns = document.querySelectorAll(".m-buttonList__tabBtn");
-// Change Html Document to Array
-const contentTabs = Array.from(document.querySelectorAll(".m-contentList__tab"));
+const tabBtns = Array.from(
+  document.querySelectorAll(".m-buttonList__tabBtn")
+);
+const tabPanels = Array.from(
+  document.querySelectorAll(".m-panelList__panel")
+);
 
 tabBtns.forEach(btn => {
- btn.addEventListener("keydown", function (e) {
- 	     // Change focus between tabs
-   }
- });
- 
- btn.addEventListener("click", function (e) {
- 	     // Switch between tabs
- });
+  btn.addEventListener("keydown", function (e) {
+      // Change focus between tabs
+    }
+  });
+
+  btn.addEventListener("click", function (e) {
+      // Switch between tabs
+  });
 });
 ```
 
@@ -128,19 +131,20 @@ Burada görüceğiniz gibi her bir buton için keydown ve click event handler la
 
 #### Event Uygulama
 
-Bu kısım bir önceki bölüme göre birazcık daha dikkat gerektirdiğinden elimden geldiğince her şeyi açıklamaya çalışacağım. Öncelikle click eventinde yapmamız gereken seçilen tabın class ını değiştirmek olacaktır. Bunun için öncelikle bütün tabları dolaşıp **-open** class ını kaldırıp daha sonrasında ise butonun control ettiği tabı bulup o taba -**open** classını ekleyeceğiz;
+Bu kısım bir önceki bölüme göre birazcık daha dikkat gerektirdiğinden elimden geldiğince detaylı açıklamaya çalışacağım. Öncelikle click eventinde yapmamız gereken, seçilen tabın ilgili panelinin class ına, **-open** eklemek olacaktır. Eklenmeden önce diğer panel elemanlarından bu class varsa kaldırmak zorundayız. Bunun nedeni bir t anında yalnızca bir tane panel açılabilmesidir. Bütün panelleri dolaşıp ilgili **-open** class ını kaldırdıktan sonra ise butonun control ettiği paneli bulup o panele -**open** classını ekleyeceğiz.
 
 ```javascript
 tabBtns.forEach(btn => {
-	btn.addEventListener("click", function (e) {
-	  contentTabs.forEach(tab=> tab.classList.remove("-open"));
-	
-	  let controlledTabId = this.getAttribute("aria-controls");
-	  let controlledTab = contentTabs.find(tab=> tab.getAttribute("id") === controlledTabId);
-	  controlledTab.classList.add("-open");
-	});
+  btn.addEventListener("click", function (e) {
+    contentTabs.forEach(tab=> tab.classList.remove("-open"));
 
-	// keydown event will be added
+    let controlledPanelId = this.getAttribute("aria-controls");
+    let controlledPanel = tabPanels.find(panel => panel.getAttribute("id") === controlledPanelId);
+
+    controlledPanel.classList.add("-open");
+  });
+
+  // keydown event will be added
 });
 ```
 
@@ -150,27 +154,38 @@ Click eventimizde yapacaklarımız bu kadardı. Şimdi **keydown** eventini kodl
 
 ```javascript
 tabBtns.forEach(btn => {
-	
-	// ... click event
-	
-	btn.addEventListener("keydown", function (e) {
-	  if (e.keyCode === keyCodes.up || e.keyCode === keyCodes.left) {
-	    selectPreviousEl(this, tabBtns[tabBtns.length - 1]);
-	  } else if (e.keyCode === keyCodes.down || e.keyCode === keyCodes.right) {
-	    selectNextEl(this, tabBtns[0]);
-	  } else if (e.keyCode === keyCodes.del) {
-	    if (!this.dataset || !this.dataset.hasOwnProperty("deletable")) {
-	      console.log("You can't delete that 😢")
-	      return;
-	    }
-	
-	    let controlledTabId = this.getAttribute("aria-controls");
-	    let controlledTab = contentTabs.find(tab=> tab.getAttribute("id") === controlledTabId);
-	
-	    controlledTab.parentNode.removeChild(controlledTab);
-	    this.parentNode.removeChild(this);
-	  }
-	});
+    // click event
+  btn.addEventListener("keydown", function(e) {
+    if (e.keyCode === keyCodes.up || e.keyCode === keyCodes.left) {
+      selectPreviousEl(this, tabBtns[tabBtns.length - 1]);
+    } else if (
+      e.keyCode === keyCodes.down ||
+      e.keyCode === keyCodes.right
+    ) {
+      selectNextEl(this, tabBtns[0]);
+    } else if (e.keyCode === keyCodes.del) {
+      if (!this.dataset || !this.dataset.hasOwnProperty("deletable")) {
+        console.log("You can't delete that 😢");
+        return;
+      }
+
+      let controlledPanelId = this.getAttribute("aria-controls");
+      let controlledPanel = tabPanels.find(
+        panel => panel.getAttribute("id") === controlledPanelId
+      );
+
+      const siblingEl =
+        this.previousElementSibling || this.nextElementSibling;
+
+      const index = tabBtns.indexOf(this);
+      tabBtns.splice(index, 1);
+
+      controlledPanel.parentNode.removeChild(controlledPanel);
+      this.parentNode.removeChild(this);
+      siblingEl.focus();
+      siblingEl.click();
+    }
+  });
 });
 
 function selectPreviousEl (target, defaultEl) {
