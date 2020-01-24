@@ -6,28 +6,28 @@ description: >-
 
 # Javascript & Erişebilirlik: Tablist
 
-Bu makalemizde tablistler üzerinde erişebilirliği javascript ile nasıl kontrol edebileceğimizi anlatmaya çalışacağım.
+Bu makalemizde tablistler üzerinde erişebilirliği javascript ile nasıl kontrol edebileceğimizi anlatmaya çalışacağım 👨🏻‍💼.
 
 Genel olarak odaklanacağım konu başlıklarını açıklayacak olursam;
 
-* Tablist için klavye desteğinin sağlanması
+* Tablist için klavye desteğinin sağlanması,
 * Screen Reader desteğinin oluşturulması
 
 olucaktır.
 
-Başlangıç olarak bu makaleyi okumadan önce sizleri tablist in erişebilirlik üzerine uygulanması alanında çok fazla bilgi bulabileceğiniz kaynağın linkini paylaşmak istedim. Linke aşağıdaki bookmarktan ulaşabilirsiniz.
+Başlangıç olarak bu makaleyi okumadan önce sizleri tablist in erişebilirlik üzerine uygulanması alanında çok fazla bilgi bulabileceğiniz kaynağın linkini paylaşmak istedim. Linke aşağıdan ulaşabilirsiniz 👇🏻
 
 {% embed url="https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html" caption="Tablistler için Erişebilirlik Adımları" %}
 
 Erişebilirlik özelliklerini eklerken örnekler üzerinden sizlere açıklamalar yapmaya çalışacağım.
 
-Öncelikle sorunumuzu anlamaya çalışalım.
+Öncelikle sorunlarımızı belirtmeye çalışayım;
 
-1. Kullanıcımız tablar arasında geçiş yaparken klavye kullanabilmeli ve tablar arasında ok tuşları ile geçebilmelidir.
-2. Kullanıcımız silinebilen tabları klavyesi ile silebilmelidir
-3. Screen Reader kullanan kullanıcılarımıza gerekli bilgilendirmeleri düzgün vermemiz gerekmektedir.
+1. Kullanıcımız tablar arasında geçiş yaparken klavye kullanabilmeli ve tablar arasında ok tuşları ile geçebilmelidir
+2. Kullanıcımız silinebilen tabları klavyenin delete tuşu ile DOM üzerinden kaldırabilmelidir.
+3. Screen Reader kullanan kullanıcılarımıza gerekli ve anlamlı bilgilendirmeleri vermemiz gerekmektedir.
 
-Sorunlarımızı listelediğimize göre ilk olarak genel yapıyı şekillendirmeye çalışalım. Çok fazla css e odaklanmak makaleyi uzatacağından stil kısmına çok fazla takılmadan genel olayları eklemeye çalışalım.
+Sorunlarımızı listelediğimize göre ilk olarak genel yapıyı şekillendirmeye çalışalım. Çok fazla css e odaklanmak makaleyi uzatacağından stil kısmına çok fazla takılmadan genel olayları eklemeye çalışacağım.
 
 ### HTML Yapısı
 
@@ -37,27 +37,28 @@ Html yapısı genel olarak button ve ilgili div elementlerinde oluşmaktadır.
 
 ### Aria Özellikleri
 
-Aria özellikleri olarak ihtiyacımız olan elementler genel olarak ilgili butonun seçilip seçilmediğini bilgilendirmek için kullanacağımız **aria-controls** özelliği, kontrol ettiği paneli söylemek için kullanacağımız **aria-controls** özelliği ve ayrıca genel olarak çoğu yapıda ortak kullanılan **tabindex** ve **role** özellikleri olacaktır. Bu özellikler screen reader kullanan kullanıcılara detaylı bilgilendirme yapmak için olacaktır. Daha detaylı bilgilendirme için makalenin başında belirttiğim linke tıklayarak bilgi alabilirsiniz.
+Aria özellikleri olarak ihtiyacımız olan elementler genel olarak ilgili butonun seçilip seçilmediğini bilgilendirmek için kullanacağımız **aria-selected** özelliği, kontrol ettiği paneli bilgilendirmek için kullanacağımız **aria-controls** özelliği ve ayrıca genel olarak çoğu yapıda ortak kullanılan **tabindex** ve **role** özellikleri olacaktır. Bu özellikler screen reader kullanan kullanıcılara detaylı bilgilendirme yapmak için olacaktır. Daha detaylı bilgilendirme için [makalenin başında belirttiğim linke](https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html) tıklayarak bilgi alabilirsiniz.
 
 ```markup
 <div class="m-buttonList" role="tablist">
-	<button class="m-buttonList__tabBtn" 
-        role="tab" 
-        aria-selected="true"
-        aria-controls="tab1"
-        >
-        Tab-1
-   </button>
-	<!-- ... -->
+  <button class="m-buttonList__tabBtn" 
+      role="tab" 
+      aria-selected="true"
+      aria-controls="tab1"
+      >
+      Tab-1
+    </button>
+      <!-- ... -->
 </div>
+
 <div class="m-contentList">
-	<div class="m-contentList__tab -tab1 -open" 
-     id="tab1"
-     tabindex="0"
-     role="tabpanel"
-     >
-       Tab-1 panel
-   </div>
+  <div class="m-contentList__tab -tab1 -open" 
+    id="tab1"
+    tabindex="0"
+    role="tabpanel"
+    >
+    Tab-1 panel
+  </div>
 </div>
 ```
 
@@ -65,11 +66,11 @@ Aria özellikleri olarak ihtiyacımız olan elementler genel olarak ilgili buton
 
 ### Stil Ekleme
 
-Css kısmında çok fazla vakit kaybetmek istemediğimden genel olarak yapıyı aktarmaya çalışacağım. O sebeple en azından göze hoş gelmesi açısından css eklemeye çalışalım.
+Css kısmında yalnızca butonlara ve ilgili paneller ile uğraştım. Bu kısımda çok fazla takılmak istemediğimden bu şekilde bıraktım.
 
 {% embed url="https://codepen.io/afozbek/pen/xxbBGvL" caption="a11y-tablist3 - stil ekleme" %}
 
-Belirtmek istediğim bir noktayı açıklayacak olursam;
+Burada yalnızca şu noktayı açıklamak istiyorum;
 
 ```css
 .m-contentList {
@@ -83,20 +84,20 @@ Belirtmek istediğim bir noktayı açıklayacak olursam;
 }
 ```
 
-Butonumuz tarafından açılan tabımıza javascript tarafında **-open** class ı ekliyeceğiz. İsimlendirme olarak **-open** seçmemim nedeni bu classın modifier özelliğini taşımasındandır. Çok fazla ayrıntıya girmeden devam ediyorum.
+Butonumuz tarafından açılan tabımıza javascript click eventi aracılığıyla **-open** class ı ekliyeceğiz. İsimlendirme olarak **-open** seçmemim nedeni bu classın modifier özelliğini taşımasındandır. Çok fazla ayrıntıya girmeden devam ediyorum.
 
-Genel olarak yapıya baktığımızda her bir tabımızı aktif eden ilgili butonlarımız bulunmakta ve atanan **-open** class ına göre de ilgilin tabımız açılmaktadır. Html css kısmında eklemek istediklerimiz genel olarak bu kadardı. Manuel olarak **-open** class ını değiştirmeyeceğimiz için artık javascript kısmına geçebiliriz.
+Genel olarak yapıya baktığımızda her bir tabımızı aktif eden ilgili butonlarımız bulunmakta ve atanan **-open** class ına göre de ilgili tabımız açılmaktadır. Html ve Css kısmında eklemek istediklerimiz genel olarak bu kadardı. Manuel olarak **-open** class ını değiştirmeyeceğimiz için artık javascript kısmına geçebiliriz.
 
 ### Javascript
 
-Evet artık bu kısımı 2 parçaya bölmek istedim.
+Javascript kısmını 2 parçaya bölmek istedim;
 
 * İlk olarak butonlarımıza ekleyeceğimiz event handler ları tanımlıyacağız. Klavye üzerinden hangi tuşları kullanacağımıza bakıcağız. Ve bunları javascript tarafında oluşturacağız.
 * Diğer kısımda oluşturduğumuz event leri dolduracağız ve html üzerinde söz sahibi olacağız.
 
 #### Event Tanımlama
 
-Burada bizim aslında kullanmamız gereken elementler: Butonlarımız ve tablarımız. Bu sebeple bunları öncesinde seçmemiz gerekir. Tuş olarak da ok tuşlarını ve tab silmek için delete tuşunu kullanacağımız için bunların key code larını tanımlamamız gerekir. Sonrasında her bir buton için hem **click** hem de **keydown** eventi tanımlamamız gerekicektir. O zaman kodlamaya başlayalım;
+Burada bizim üzerinde uğraşacağımız elementler tab butonlarımız ve panellerimizdir. Bu sebeple bunları öncesinde DOM'dan seçerek değişkenlere atamamız gerekecektir. Tuş olarak da ok tuşlarını ve tab silmek için kullanacağımız delete tuşunu ve bunların key code larını da bir değişkene atmamız mantıklı olacaktır. Sonrasında her bir buton için hem **click** hem de **keydown** eventi tanımlamamız gerekecektir. O zaman kodlamaya başlayalım 👨🏻‍💻;
 
 ```javascript
 const keyCodes = {
