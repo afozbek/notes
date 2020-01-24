@@ -2,6 +2,12 @@
 
 * [Kişisel Notlarım](README.md)
 
+## User Experience
+
+* [Web Accessibility](user-experience/accessibility.md)
+
+## Javascript
+
 ## svg
 
 * [All About SVG’s](svg/all-about-svgs.md)
@@ -13,8 +19,4 @@
 ## Layout
 
 * [Masonry Layout](layout/masonry-layout.md)
-
-## User Experience
-
-* [Web Accessibility](user-experience/accessibility.md)
 
