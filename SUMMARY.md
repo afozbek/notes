@@ -21,3 +21,7 @@
 
 * [Masonry Layout](layout/masonry-layout.md)
 
+## Tutorials
+
+* [Linux Ubuntu Çalışma Notlarım](tutorials/linux-ubuntu-calisma-notlarim.md)
+
