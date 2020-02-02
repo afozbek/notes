@@ -1,5 +1,7 @@
 ---
-description: Sunucu tarafındaki bilgilerimi geliştirmek için oluşturduğum kısayollardır.
+description: >-
+  Sunucu tarafındaki bilgilerimi geliştirirken öğrendiğim kısayollar bu makale
+  içeriğine eklemiş bulundum. Umarım faydalı olur.
 ---
 
 # Linux Ubuntu Çalışma Notlarım
