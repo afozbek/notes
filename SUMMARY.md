@@ -7,8 +7,6 @@
 * [Javascript & Erişebilirlik: Tablist](user-experience/javascript-and-erisebilirlik-tablist.md)
 * [Web Accessibility](user-experience/accessibility.md)
 
-## Javascript
-
 ## svg
 
 * [All About SVG’s](svg/all-about-svgs.md)
