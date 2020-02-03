@@ -27,6 +27,12 @@ description: "I have added the shortcuts I learned while developing my server si
 * **Look for System is Working Properly**
   * `sudo systemctl status sshd`
   * `sudo systemctl restart ssh`
+* **Look Memory Usage**
+
+  > [5 commands to check memory usage on Linux – BinaryTides](https://www.binarytides.com/linux-command-check-memory-usage/)
+
+  * `free -h`
+  * `vmstat -s`
 
 ### **NGINX \(LIKE APACHE\) - Reverse Proxy**
 
