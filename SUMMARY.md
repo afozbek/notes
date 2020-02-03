@@ -23,5 +23,5 @@
 
 ## Tutorials
 
-* [Linux Ubuntu Çalışma Notlarım](tutorials/linux-ubuntu-calisma-notlarim.md)
+* [Helpful Linux Commands](tutorials/linux-ubuntu-calisma-notlarim.md)
 
