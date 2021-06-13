@@ -1,5 +1,5 @@
 ---
-description: "Bu sitede, almış olduğum notları sizlerle paylaşıyor olacağım. Kısaca kim olduğumu merak ediyorsanız aşağıdaki paragrafları okumalısınız \U0001F607"
+description: "Bu sitede, almış olduğum notları sizlerle paylaşıyor olacağım. Kısaca kim olduğumu merak ediyorsanız aşağıdaki paragrafları okumalısınız\U0001F607"
 ---
 
 # Kişisel Notlarım
