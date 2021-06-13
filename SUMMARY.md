@@ -2,25 +2,13 @@
 
 * [Kişisel Notlarım](README.md)
 
-## User Experience
-
-* [Javascript & Erişebilirlik: Tablist](user-experience/javascript-and-erisebilirlik-tablist.md)
-* [Web Accessibility](user-experience/accessibility.md)
-
-## svg
-
-* [All About SVG’s](svg/all-about-svgs.md)
-
-## Machine Learning
-
-* [Supervised Learning nedir Unsupervised learning nedir?](machine-learning/supervised-learning-nedir-unsupervised-learning-nedir.md)
-
-## Layout
-
-* [Masonry Layout](layout/masonry-layout.md)
-
 ## Tutorials
 
 * [How Context Helps for State Management](tutorials/how-context-helps-for-state-management.md)
+* [Javascript & Erişebilirlik: Tablist](tutorials/javascript-and-erisebilirlik-tablist.md)
+* [Web Accessibility](tutorials/accessibility.md)
+* [All About SVG’s](tutorials/all-about-svgs.md)
+* [Supervised Learning nedir Unsupervised learning nedir?](tutorials/supervised-learning-nedir-unsupervised-learning-nedir.md)
+* [Masonry Layout](tutorials/masonry-layout.md)
 * [Helpful Linux Commands](tutorials/linux-ubuntu-calisma-notlarim.md)
 
