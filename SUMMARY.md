@@ -11,4 +11,5 @@
 * [Supervised Learning nedir Unsupervised learning nedir?](tutorials/supervised-learning-nedir-unsupervised-learning-nedir.md)
 * [Masonry Layout](tutorials/masonry-layout.md)
 * [Helpful Linux Commands](tutorials/linux-ubuntu-calisma-notlarim.md)
+* [Ethereum Development: Solidity](tutorials/ethereum-development-solidity.md)
 
