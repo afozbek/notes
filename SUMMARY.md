@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Kişisel Notlarım](README.md)
+* [Personal Notes](README.md)
 
 ## Tutorials
 

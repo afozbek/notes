@@ -1,37 +1,26 @@
 ---
-description: "Bu sitede, almış olduğum notları sizlerle paylaşıyor olacağım. Kısaca kim olduğumu merak ediyorsanız aşağıdaki paragrafları okumalısınız\U0001F607"
+description: "In this website, I will be sharing articles about programming tutorials. If you want to know a little bit about me you can look belove \U0001F607"
 ---
 
-# Kişisel Notlarım
+# Personal Notes
 
-## Merhaba 🙌🏻
+## Who is Furkan 👨🏻‍💻
 
-Kişisel notlarımı aldığım ve özetler paylaştığım sayfama hoşgeldiniz. Sağ üstte bulunan arama butonundan istediğiniz makaleyi arayabilirsiniz. Şu an geliştirme aşamasında olduğumdan arama butonunu kullanmadan da hızlıca sayfalarda gezinebilirsiniz.
+Hello there, My name is Furkan.
 
-## Kimim Ben 👨🏻‍💻
+I am a software engineer whose main purpose is to create best optimal experience for user but also keeping the application or project as performant as possible.
 
-Problemlerimi kod ile çözmekten hoşlanan bir yazılım geliştiricisiyim. Boyner şirketinde Front End Developer olarak çalışıyorum ve yaptığım işten zevk alıyorum.
+I am interested on web technologies and I am building new projects in this subject. I am especially familiar with React, Vue, Node and Java. You can check out what I built on my GitHub account. 
 
-Web teknolojilerine ilgi duyuyorum ve bu alanda projeler geliştiriyorum. Özellikle **Reactjs, Reduxjs, Nodejs ve Vue.js** alanında bilgi sahibiyim. Bildiklerimi geliştirmeye ve yeni teknolojiler öğrenmeye her gün gayret gösteriyorum. 
+**Things I like to do;**
 
-#### Yapmaktan hoşlandığım aktiviteler
-
-* Problem çözmek, 
-* Bildiklerimi başkasına anlatmak 
-* Yeni projeler üretmek
-* Yeni insanlarla tanışmak
-* Planlı ve programlı çalışmak
-* Çevremdeki insanların problemlerini dinleyip çözüm önerisi sunmak
-* Arkadaşlarımla dolaşmak ve sohbet etmek
-* Film izlemek
-* Müzik dinlemek
-* Yüzmek
-
-### İletişim Halinde Olalım 😊
-
-Benimle sosyal medya hesaplarım aracılığıyla iletişime geçebilirsiniz.
-
-* [Linkedin Hesabım](https://www.linkedin.com/in/afozbek/)
-* [Github Hesabım](https://github.com/afozbek)
-* [Twitter Hesabım](https://twitter.com/afozbek_)
+* Try to solve other people's struggles 
+* Teaching or telling something I know to friends or colleagues
+* Building different kinds of projects 
+* Meeting new people 
+*  Listening podcasts
+* Playing Chess
+* Watching drama \| sci-fi movies 
+* Listening music when I travel or trying to fix problems 
+* Researching next generation technologies like cyptocurrency, IOT, smart devices
 
