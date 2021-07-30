@@ -9,6 +9,8 @@ description: "I have added the shortcuts I learned while developing my server si
 * **COPY**
   * `cp index.js node-server/` to the directory
   * `cp index.js main.js` to the current directory
+* **Move Folder** `mv  -v ~/Downloads/* ~/Videos/`
+* **Delete Folder** `rm -r dir1`
 * **Restart:**  `sudo reboot`
 * **Update-Upgrade** `sudo apt-get update`  `sudo apt-get upgrade` 
 * **Switch User** `su - afozbek`
