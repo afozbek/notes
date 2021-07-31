@@ -4,13 +4,14 @@ description: "I have added the shortcuts I learned while developing my server si
 
 # Helpful Linux Commands
 
-## LINUX COMMANDS
+## LINUX/MAC COMMANDS
 
 * **COPY**
   * `cp index.js node-server/` to the directory
   * `cp index.js main.js` to the current directory
 * **Move Folder** `mv  -v ~/Downloads/* ~/Videos/`
 * **Delete Folder** `rm -r dir1`
+* **Open Folder** `open ./Downloads`
 * **Restart:**  `sudo reboot`
 * **Update-Upgrade** `sudo apt-get update`  `sudo apt-get upgrade` 
 * **Switch User** `su - afozbek`
